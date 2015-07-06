@@ -23,6 +23,12 @@
     CGFloat content_y;
 }
 
+- (void)dealloc{
+    myCollectionView.delegate = nil;
+//    myCollectionView.dataSource = nil;
+    layout.delegate = nil;
+}
+
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
 //    myCollectionView.frame = self.view.bounds;
@@ -141,11 +147,6 @@
     
     return CGSizeMake(cell_w, img_h);
     
-}
-
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(0,0, 0,0);
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
