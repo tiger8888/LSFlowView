@@ -86,13 +86,8 @@
 }
 - (void)actionOfPushNew{
     
-    UIAlertView* alertv = [[UIAlertView alloc] initWithTitle:@"一个问题" message:@"当push一个新的VC后，将视图滑动到底部然后返回 程序崩溃,不知道是什么原因，还望大神赐教! \n多谢!" delegate:nil cancelButtonTitle:@"让朕看看" otherButtonTitles: nil];
+    UIAlertView* alertv = [[UIAlertView alloc] initWithTitle:@"一个问题" message:@"已经解决了！" delegate:nil cancelButtonTitle:@"朕知道了" otherButtonTitles: nil];
     [alertv show];
-    
-    //push一个当前VC后将视图滑动到底部然后返回 程序崩溃
-    ViewController* vc = [[ViewController alloc] init];
-    vc.title = @"一个错误";
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)getTestInfo{
